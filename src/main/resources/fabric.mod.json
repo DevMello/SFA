@@ -1,0 +1,38 @@
+{
+  "schemaVersion": 1,
+  "id": "twitchchat",
+  "version": "${version}",
+
+  "name": "Twitch Chat Bridge",
+  "icon": "assets/twitchchat/icon.png",
+  "description": "Interconnect Minecraft chat with Twitch chat!",
+  "authors": [
+    "DevMello"
+  ],
+
+  "license": "MIT",
+
+  "environment": "*",
+  "entrypoints": {
+    "main": [
+      "cf.devmello.sfa.SFAClient"
+    ],
+    "modmenu": [
+      "cf.devmello.sfa.config.ModMenuCompat"
+    ]
+  },
+  "mixins": [
+    "twitchchat.mixins.json"
+  ],
+
+  "depends": {
+    "minecraft": "1.19.2",
+    "fabricloader": ">=0.11.3",
+    "fabric": "*",
+    "modmenu": "*",
+    "java": ">=17"
+   },
+  "custom": {
+    "modmenu:clientsideOnly": true
+  }
+}
